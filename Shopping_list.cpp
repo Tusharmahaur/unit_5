@@ -5,6 +5,7 @@ using namespace std;
 
 const int m = 50;
 
+
 class ITEMS{
         int itemCode[m];
         float itemPrice[m];
@@ -45,10 +46,20 @@ void ITEMS :: remove(void){
 }
 
 void ITEMS :: displayItems(void){
-    cout<<"\nCode Price\n";
+    cout<<endl;
+    cout.width(10);
+    cout<<"Code ";
+    cout.width(10);
+    cout<<"Price"<<endl;
+    cout<<"------------------------------"<<endl;
+   
     for(int i = 0; i<count;i++){
-        cout<<endl<<itemCode[i];
-        cout<<endl<<itemPrice[i];
+        cout.width(8);
+        cout.setf(ios::right,ios::adjustfield);
+        cout<<itemCode[i];
+        cout.width(13);
+        cout.setf(ios::right,ios::adjustfield);
+        cout<<itemPrice[i]<<endl;
     }
     cout<<endl;
 }
@@ -60,20 +71,20 @@ int main(){
     do{
         cout<<"\nYou can do the following ;"
         <<"Enter the appropriate number \n";
-        cout<<"\n1 :Add an item ";
-        cout<<"\n2 :Display total value";
-        cout<<"\n3 :Delete an item ";
-        cout<<"\n4 :Display all items ";
-        cout<<"\n5 :Quit ";
+        cout<<"\n1 : Add an item ";
+        cout<<"\n2 : Display total value";
+        cout<<"\n3 : Delete an item ";
+        cout<<"\n4 : Display all items ";
+        cout<<"\n5 : Quit ";
         cout<<"\n\nwhat is your option ? ";
         cin>>x;
 
         switch(x){
-            case 1: order.getitem(); break;
-            case 2: order.displaySum(); break;
-            case 3: order.remove(); break;
-            case 4: order.displayitems(); break;
-            case 5:break ; 
+            case 1 : order.getitem(); break;
+            case 2 : order.displaySum(); break;
+            case 3 : order.remove(); break;
+            case 4 : order.displayItems(); break;
+            case 5 : break ; 
             default : cerr<<"Error in input ;"<<endl<<
             "try again....."<<endl;
         }
