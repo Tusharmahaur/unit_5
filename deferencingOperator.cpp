@@ -60,23 +60,37 @@
 
 //dereferencing operator -> ka matlab sirf itna hai ki value ko print kara dena jo uss address par hai 
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){ 
+//     int a = 3,b=4;
+    
+//     int *ptr = &a;//pointer store to address 
+
+//     int **parentPtr = &ptr;//pointer to pointer address store
+
+//     int ***ppPtr = &parentPtr;//pointer to pointer to pointer address store 
+
+//     int ****pppPtr = &ppPtr;//pointer to pointer to pointer to pointer address store in four times
+
+//     cout<<*(&a)<<endl     // |
+//         <<a<<endl        // | -> Same value print is 3
+//         <<*ptr<<endl;   // |
+//     cout<<**parentPtr<<endl;
+//     cout<<***ppPtr<<endl;
+//     cout<<****pppPtr<<endl;
+//     return 0;
+// }
+
+//null pointer 
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    int a = 3,b=4;
-    
-    int *ptr = &a;//pointer store to address 
-
-    int **parentPtr = &ptr;//pointer to pointer address store
-
-    int ***ppPtr = &parentPtr;//pointer to pointer to pointer address store 
-
-    int ****pppPtr = &ppPtr;//pointer to pointer to pointer to pointer address store in four times
-
-    <<*(&a)<<endl       // |
-    cout<<a<<endl       // | -> Same value print is 3
-        <<*ptr<<endl;   // |
-    
+    int a = 10;
+    int *ptr = NULL;
+    cout<<ptr<<endl;
     return 0;
 }
