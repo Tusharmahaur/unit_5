@@ -84,13 +84,49 @@
 // }
 
 //null pointer 
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main(){
-    int a = 10;
-    int *ptr = NULL;
-    cout<<ptr<<endl;
-    return 0;
-}
+// int main(){
+//     int a = 10;
+//     int *ptr = NULL;
+//     cout<<ptr<<endl;
+//     return 0;
+// }
+
+//class object array 
+
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Complex{
+//     int real,img;
+//     public:
+//         void getData(){
+//             cout<<"The real part is : "<<real<<endl;
+//             cout<<"The imaginary part is : "<<img<<endl;
+//         }
+
+//         void setData(int a, int b){
+//             real = a;
+//             img = b;
+//         }
+// };
+
+// int main(){
+//     // Complex c1;         //|case 1
+//     // Complex *ptr = &c1;   |   
+//     Complex *ptr = new Complex;
+//     // c1.setData(1,3);
+//     // c1.getData();
+//     // (*ptr).setData(1,3); //(*ptr).setData(1,3) = ptr->setData(1,3)
+//     ptr->setData(1,3); 
+//     (*ptr).getData();
+//     Complex *ptr1 = new Complex[4];//That is the object array
+
+//     (ptr1+1)->setData(3,5);
+//     (ptr1+1)->getData();    
+//     return 0;
+// }
